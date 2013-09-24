@@ -1,0 +1,61 @@
+<title>Web Services</title>
+<script  src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<div data-role="page" id="home">
+<header  data-role="header">
+    <h1>Web Services</h1>
+    <a href="#">Maps</a>
+    <a href="#">Temperature Converter</a>
+</header>
+
+<article data-role="content">
+    <ul data-role="listview" data-filter="true">
+        <li>
+            <a href="#Map">
+                <h1>Directions</h1>
+                </a>     
+        </li>
+         <li>
+            <a href="#Temperature Converter">
+                <h1>Temperature Converter</h1>
+                </a>     
+        </li>
+    </ul>    
+</article>
+<footer data-role="footer" data-position="fixed">
+    <nav data-role="navbar">
+        <ul>
+            <li><a href="#" data-icon="home">Home</a></li> 
+            <li><a href="#" data-icon="maps">Maps</a></li> 
+            <li><a href="#" data-icon="grid">Temperature Converter</a></li> 
+        </ul>
+    </nav>
+</footer>
+    </div> <!--Page 1-->  
+    
+<!-- Page 2-->    
+    <div data-role="page" id="Map">
+<header  data-role="header">
+    <h1>Maps</h1>
+    <a href="#home" data-icon="home">Home</a>
+    </header>
+        <body onload="initialize()">
+<div id="map_canvas" style="height: 40000px; width: 40000px"></div>  
+        </body>
+</div>           
+ <!--Page 2-->  
+
+<!-- Page 3-->    
+      <div data-role="page" id="Temperature Converter" >
+<header  data-role="header">
+    <h1>Temperature Converter</h1>
+    <input id="c" name="c" onkeyup="convert('C')">Celsius Degrees
+   <br>Equals<br> 
+<input id="f" name="f" onkeyup="convert('F')">Fahrenheit Degrees
+    <a href="#home" data-icon="home">Home</a>
+    </header>
+     </div>
+ <!--Page 3-->  
+
+    
+     
