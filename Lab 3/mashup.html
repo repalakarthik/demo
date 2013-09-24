@@ -1,0 +1,150 @@
+<title>The New 7 Wonders of the World on Google Maps</title> 
+
+
+
+	
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyAXkhnAwXJPjCe7hSpOwQZ-Gmevgplkfjk" 
+	type="text/javascript"> 
+	</script> 
+	
+<script type="text/javascript"> 
+	//<![CDATA[ 
+	// 1. Define icons 
+	
+	var iconprim = new GIcon(); 
+	iconprim.shadow = "http://www.google.com/mapfiles/shadow50.png"; 
+	iconprim.iconSize = new GSize(20, 34); 
+	iconprim.shadowSize = new GSize(37, 34); 
+	iconprim.iconAnchor = new GPoint(10, 34); 
+	iconprim.infoWindowAnchor = new GPoint(4, 4); 
+	
+	var markers; 
+	var infoHtml; 
+	var ranNum= Math.floor(Math.random()*7); 
+	var map; 
+	var name1 = new Array("India's Taj Mahal","Great Wall of China","Petra in Jordan","Brazil's statue of Christ the Redeemer","Peru's Machu Picchu","Mexico's Chichen Itza pyramid","The Colosseum in Rome"); 
+	var points = new Array(new GLatLng(27.174961,78.042385),new GLatLng(40.334245,116.477652),new GLatLng(30.328611,35.441944),new GLatLng(-22.951389,-43.2108334),new GLatLng(-13.163056,-72.545556),new GLatLng(20.682778,-88.569167),new GLatLng(41.890169,12.492269)); 
+	var youtube = new Array("ZblinvBE1VI","Hz8ErMx6QZU","VAXu4ODpqmk","TD6Dc--Cec8","6jJW7aSNCzU","wjOyi2IQKSI","1ycODdZkRpQ"); 
+	var img = new Array("taj","greatwall","petra","rioredeemer","machupicchu","chichen","colloseum"); 
+	var youtubelink1 = ' <embed src="http://www.youtube.com/v/'; 
+	var youtubelink2 = '&autoplay=1" type="application/x-shockwave-flash" width="340" height="280"></embed>'; 
+	var wikipedialink = new Array("Taj_mahal","Great_wall_of_china","Petra","Christ_the_Redeemer_%28Rio_de_Janeiro%29","Machu_picchu","Chichen-Itza","Colosseum"); 
+	var wikipedialinkheader = "http://en.wikipedia.org/wiki/"; 
+	var zoom = new Array(18,14,18,18,18,14,18); 
+	function onLoad() { 
+	// 3. Set up map 
+	// alert ("I am here"); 
+	
+	map = new GMap2(document.getElementById("map")); 
+	map.addControl(new GSmallMapControl()); 
+	map.addControl(new GMapTypeControl()); 
+	map.setCenter(new GLatLng(27.174961,78.042385),18,G_SATELLITE_MAP); 
+	show7wonders(); 
+	mashups(); 
+	} 
+	function show7wonders() { 
+	
+	map.clearOverlays(); 
+	infoHtml = new Array(name1.length); 
+	markers = new Array(name1.length); 
+	for(var i = 0; i < name1.length; i++) { 
+	
+	var point = points[i]; 
+	infoHtml[i] = "<div class=\"bubble\">"; 
+	// infoHtml[i] += "<img src='" + img[i] + ".jpg' width='80px' height='60px' align='left'/>"; 
+	infoHtml[i] += "<h2><b><a href='" + wikipedialinkheader + wikipedialink[i] + "'>" + name1[i] + "</a></b> </h2>"; 
+	infoHtml[i] += "<hr>"; 
+	infoHtml[i] += youtubelink1 + youtube[i] + youtubelink2; 
+	infoHtml[i] += "</div>" 
+	iconprim.image = "../images/marker_34_blue.png"; 
+	markers[i] = new GMarker(point,iconprim); 
+	GEvent.addListener( markers[i], 'click', makeOpenerCaller(i) ); 
+	map.addOverlay(markers[i]); 
+	if (i == ranNum) 
+	{ 
+	map.setZoom(zoom[i]); 
+	markers[i].openInfoWindowHtml( infoHtml[i] ); 
+	} 
+	} 
+	} 
+	
+	// Open the info box for the specified marker. 
+	function opener(i){ 
+	map.setZoom(zoom[i]); 
+	markers[i].openInfoWindowHtml( infoHtml[i] ); 
+	} 
+	
+	// This returns a function closure that calls opener() with the specified arg. 
+	
+	function makeOpenerCaller( i ) 
+	{ 
+	return function() { opener( i ); }; 
+	} 
+	//]]> 
+	
+	</script> 
+	
+	<link href="../styles.css" rel="stylesheet" type="text/css"> 
+
+	<body bgColor="#1D1457" leftMargin="0" topMargin="0" marginwidth="0" marginheight="0" onLoad="onLoad()" onUnload="GUnload()"> 
+	<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#DDE5F9"> 
+	<tr><td bgcolor="#DDE5F9"> 
+	<div align="center"> 
+	
+	<table width="95%" height="54" border="0" cellpadding="4" cellspacing="0"> 
+	
+	<tr align="center" valign="middle"> 
+	<td width="100%" align="left" valign="top"><div align="left"><h2><a href="http://www.mibazaar.com/"></a><br /><a href="http://apps.facebook.com/sevenwonders/"><img src="../find_us_on_facebook_badge.gif" width="72px" height="22px"/></a></h2></div></td> 
+	<td width="100%" align="right"><div align="right"> 
+	<script type="text/javascript"><!-- 
+	google_ad_client = "pub-7086934065313841"; 
+	google_alternate_color = "DDE5F9"; 
+	google_ad_width = 468; 
+	google_ad_height = 60; 
+	google_ad_format = "468x60_as"; 
+	google_ad_type = "text_image"; 
+	google_ad_channel = ""; 
+	google_color_border = "DDE5F9"; 
+	google_color_bg = "DDE5F9"; 
+	google_color_link = "0000FF"; 
+	google_color_text = "000000"; 
+	google_color_url = "008000"; 
+	//--></script> 
+	<script type="text/javascript" 
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+	</script> 
+	</div> 
+	</td> 
+	</tr> 
+	</table></div> 
+	<div align="center"> 
+	<table width="95%" border="0" cellpadding="4" align="center" cellspacing="5" bgcolor="#DDE5F9"> 
+	<tr> 
+	<td valign="top" align="center"><a href="javascript:opener(0)"><img src="http://upload.wikimedia.org/wikipedia/commons/c/c8/Taj_Mahal_in_March_2004.jpg" width="80" height="60" border="0" alt="Taj Mahal"</a></td> 
+	<td valign="top" align="center"><a href="javascript:opener(1)"><img src="http://www.full-stop.net/wp-content/uploads/2012/05/Great-wall-of-china.jpeg" width="80" height="60" border="0" alt="Great Wall of China"></a></td> 
+	<td valign="top" align="center"><a href="javascript:opener(2)"><img src="http://upload.wikimedia.org/wikipedia/commons/a/a5/Petra_Jordan_BW_36.JPG" width="80" height="60" border="0" alt="Petra in Jordan"></a></td> 
+	<td valign="top" align="center"><a href="javascript:opener(3)"><img src="http://upload.wikimedia.org/wikipedia/commons/8/87/Cristo_Redentor_-_Rio_de_Janeiro,_Brasil.jpg" width="80" height="60" border="0" alt="Brazil's statue of Christ the Redeemer"></a></td> 
+	<td valign="top" align="center"><a href="javascript:opener(4)"><img src="http://basicgoodness.com/2010/wp-content/uploads/2013/02/Machu-Picchu.jpeg" width="80" height="60" border="0" alt="Peru's Machu Picchu"></a></td> 
+	<td valign="top" align="center"><a href="javascript:opener(5)"><img src="http://upload.wikimedia.org/wikipedia/commons/9/91/Chichen_Itza_pyramid.jpg" width="80" height="60" border="0" alt="Mexico's Chichen Itza pyramid"></a></td> 
+	<td valign="top" align="center"><a href="javascript:opener(6)"><img src="http://upload.wikimedia.org/wikipedia/commons/5/53/Colosseum_in_Rome,_Italy_-_April_2007.jpg" width="80" height="60" border="0" alt="The Colosseum in Rome"></a></td> 
+		<div align="center"> 
+	<table width="95%" border="0" cellpadding="4" align="center" cellspacing="10" bgcolor="#DDE5F9"> 
+	<tr> 
+	<td colspan="2" valign="top" bgcolor="#FFFFFF" class="text_big_bold"><div align="center">The New 7 Wonders of the World</div></td> 
+    </tr> 
+	<tr> 
+	<td width="100%" valign="top" bgcolor="#FFFFFF"><div id="map" style="width: 100%; height: 600px"></div> </td> 
+	</tr> 
+	</table> 
+	</div> 
+	<center> 
+	<SCRIPT TYPE="text/javascript" SRC="http://www.google-analytics.com/urchin.js"> 
+
+	</SCRIPT> 
+	<SCRIPT TYPE="text/javascript"> 
+	_uacct = "UA-80086-2"; 
+	urchinTracker(); 
+	</SCRIPT> 
+	</center>  
+
+

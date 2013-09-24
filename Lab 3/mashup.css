@@ -1,0 +1,39 @@
+<style type="text/css"> 
+	.bubble { 
+	width:350px; max-width:350px; 
+	text-align:left; 
+	overflow:auto; 
+	font-family:verdana,helvetica,arial,sans-serif; 
+	} 
+	
+	.bubble h1 { 
+	font-size: 12px; 
+	margin-bottom:4px; 
+	} 
+	
+	.bubble h2 { 
+	font-size: 11px; 
+	font-weight: normal; 
+	} 
+	
+	.bubble h3 { 
+	font-size: 11px; 
+	font-weight: normal; 
+	color: #006600; 
+	margin-top: 1px; 
+	margin-bottom:-1px; 
+	} 
+	
+	.bubble h3 a, .bubble h3 a:visited { 
+	color: #006600; 
+	} 
+	
+	.bubble h3 a:hover { 
+	color: #000000; 
+	} 
+	
+	.bubble img { 
+	float: left; 
+	margin-right:6px; 
+	} 
+	
