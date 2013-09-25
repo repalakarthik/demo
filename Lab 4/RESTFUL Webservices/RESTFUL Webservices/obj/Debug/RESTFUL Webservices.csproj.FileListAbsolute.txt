@@ -1,0 +1,5 @@
+c:\users\karthik\documents\visual studio 2012\Projects\RESTFUL Webservices\RESTFUL Webservices\obj\Debug\RESTFUL Webservices.csprojResolveAssemblyReference.cache
+c:\users\karthik\documents\visual studio 2012\Projects\RESTFUL Webservices\RESTFUL Webservices\bin\RESTFUL Webservices.dll
+c:\users\karthik\documents\visual studio 2012\Projects\RESTFUL Webservices\RESTFUL Webservices\bin\RESTFUL Webservices.pdb
+c:\users\karthik\documents\visual studio 2012\Projects\RESTFUL Webservices\RESTFUL Webservices\obj\Debug\RESTFUL Webservices.dll
+c:\users\karthik\documents\visual studio 2012\Projects\RESTFUL Webservices\RESTFUL Webservices\obj\Debug\RESTFUL Webservices.pdb
